@@ -1,0 +1,90 @@
+.App {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    .app-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 550px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        background: rgb(247, 247, 247);
+        .form-widget {
+            display: flex;
+            align-items: center;
+            .form-input {
+                width: calc(100% - 200px);
+                height: 35px;
+                border: 1px solid #ddd;
+                margin-right: 10px;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+                padding: 0px 10px;
+                outline: none;
+            }
+            .btn-primary {
+                width: 200px;
+                padding: 10px;
+                border: none;
+                background: rgb(0, 63, 158);
+                color: #fff;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                -moz-border-radius: 5px;
+                -ms-border-radius: 5px;
+                -o-border-radius: 5px;
+            }
+        }
+        .search-wizard-widget {
+            margin-top: 10px;
+            height: 400px;
+            overflow-y: auto;
+            @media (min-width: 300px) and (max-width: 630px) {
+                width: 100%;
+            }
+            .search-result {
+                display: grid;
+                grid-template-columns: 31% 31% 31%;
+                grid-gap: 19px;
+                @media (min-width: 300px) and (max-width: 630px) {
+                    grid-template-columns: 48% 48%;
+                    grid-gap: 10px;
+                }
+                .album-item {
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    .album-image {
+                        width: 100%;
+                    }
+                    .album-title {
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .empty-widget {
+                padding: 30px;
+                p {
+                    text-align: center;
+                    font-size: 13px;
+                    color: rgb(109, 108, 108);
+                }
+            }
+            .loading-widget {
+                p {
+                    text-align: center;
+                    font-size: 15px;
+                    color: rgb(0, 63, 158);
+                }
+            }
+        }
+    }
+}
